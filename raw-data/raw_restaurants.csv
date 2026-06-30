@@ -1,0 +1,101 @@
+restaurant_id,restaurant_name,cuisine,city,address,rating,avg_prep_time_mins,is_open
+1,Le and Sons,Italian,AUSTIN,8284 Anna Terrace Suite 844,4.2,29min,true
+2,Peterson-Gilbert,Pizza,DALLAS,825 Goodwin Hollow,3.0,32,1
+3,"Larson, Caldwell and Lee",SUSHI,SAN ANTONIO,89792 Johnson Cliffs,,44 mins,True
+4,Hoffman-Perez,italian,HOUSTON,951 Moore Station Apt. 356,2.5/5,44min,1
+5,"Ho, Kelley and Holland",MEXICAN,Austin,,4.1/5,58,1
+6,Villa Ltd,Pizza,Austin,08588 Emily Prairie Suite 462,1.4/5,26,True
+7,Alexander Group,Pizza,AUSTIN,57969 Brown Street Suite 544,3.3/5,54min,1
+8,Everett LLC,MEXICAN,HOUSTON,09923 Anthony Burg Apt. 551,,16min,True
+9,Wood-Friedman,mexican,DALLAS,6773 Megan Plain,2.4,24,YES
+10,Garcia-Reyes,AMERICAN,Houston,433 Nancy Court Suite 558,1.7/5,24,1
+11,Brandt-Johnston,Mexican,austin,,3.6/5,42 mins,NO
+12,Yates-Mueller,Mexican,SAN ANTONIO,28421 Brandon Alley,4.8,36,NO
+13,"Hartman, Williams and Nelson",Sushi,Houston,,4.3,16min,false
+14,Forbes-Page,AMERICAN,austin,82675 Timothy Coves,3.1,44 mins,YES
+15,Robles-Jackson,THAI,Austin,36416 John Mountains Suite 506,1.1/5,36min,YES
+16,Garcia-Lopez,mexican,HOUSTON,505 Gerald Parks,,33 mins,NO
+17,Obrien-Bates,CHINESE,San Antonio,7121 William Shoal,3.4,16,YES
+18,Johnson-Martin,Sushi,HOUSTON,920 Marcia Skyway Apt. 620,3.8,35min,False
+19,Gomez PLC,mexican,austin,7046 Harrington Locks,2.5/5,48 mins,YES
+20,Rich-Hatfield,American,DALLAS,415 Pugh Island,,41 mins,False
+21,"Nolan, Dickson and Stewart",Pizza,austin,,2.1/5,60min,1
+22,Ford-Wilson,SUSHI,DALLAS,26419 Sanchez Well Suite 684,2.4,31min,1
+23,"Mora, Zhang and Lee",Italian,DALLAS,1522 James Stream,4.5/5,33,False
+24,Macias and Sons,chinese,AUSTIN,214 Rice Ford Apt. 569,,45,False
+25,Morrow Group,BURGERS,AUSTIN,030 Maria Meadow Suite 999,2.5,16,true
+26,"Reed, Mccann and Garcia",CHINESE,DALLAS,6637 Alicia Extensions,2.1,21min,YES
+27,Cole-Stewart,Chinese,AUSTIN,92348 Smith View,2.5/5,25,1
+28,"Livingston, Nguyen and King",AMERICAN,AUSTIN,056 Contreras Fall,3.2/5,47min,True
+29,"Mata, Yates and Hahn",mexican,San Antonio,172 Jessica Passage,,58 mins,NO
+30,Cooper Inc,Pizza,Dallas,559 Lisa Port Apt. 085,,37 mins,true
+31,Terry LLC,MEXICAN,austin,4571 John Groves Suite 794,2.3,42,True
+32,Mueller LLC,ITALIAN,AUSTIN,85518 Salas Crescent Suite 952,,11,NO
+33,Gordon Inc,chinese,HOUSTON,4481 Roman Skyway,4.6,29,0
+34,Hughes-Patterson,Pizza,SAN ANTONIO,59395 Betty Dale Apt. 544,2.5,58 mins,0
+35,Alvarez Group,SUSHI,Austin,00043 Linda Corner Apt. 697,4.7,37,NO
+36,"Petersen, Turner and Hayden",INDIAN,dallas,041 Dawson Locks Apt. 460,,34 mins,false
+37,Fleming PLC,Japanese,HOUSTON,49642 Nicholas Via Apt. 420,2.3,14 mins,YES
+38,Cannon Inc,AMERICAN,DALLAS,3335 April Springs Suite 228,3.8,32,True
+39,Williams PLC,Mexican,San Antonio,40047 Kenneth Islands,2.4,24,true
+40,Williams-Williams,ITALIAN,dallas,426 Brian Spur,5.0/5,50min,YES
+41,Miranda Group,Indian,HOUSTON,8832 Cooper Square,3.1/5,38 mins,YES
+42,"Schmidt, Benton and Ramirez",Japanese,San Antonio,6938 Garner Summit,3.0/5,25 mins,true
+43,Mullins-Moreno,Chinese,San Antonio,48924 Amber Prairie,1.4,40 mins,True
+44,Lamb Inc,Thai,AUSTIN,,,50,True
+45,Houston Ltd,BURGERS,DALLAS,899 Cruz Ports,1.1/5,28,false
+46,Scott Ltd,INDIAN,dallas,971 Fernandez Burg,2.7,11,1
+47,"Ramos, Nelson and Thomas",italian,AUSTIN,073 Russell Fall,3.1/5,60 mins,true
+48,"Smith, Patel and Harris",italian,austin,,,26,False
+49,"Sanford, Nunez and Gilmore",chinese,Houston,5868 David View Suite 409,2.5,31,False
+50,Baldwin-Perez,mexican,Houston,06849 Aguirre Causeway Suite 305,3.3/5,38 mins,false
+51,Ross-Martinez,Burgers,HOUSTON,1135 Brett Shores,4.5,52min,True
+52,Lopez-Henderson,Japanese,HOUSTON,376 Rodriguez Estates,1.9/5,22min,true
+53,"Sanchez, Mills and Dennis",INDIAN,San Antonio,46506 Matthew Spur,1.6,36,YES
+54,"Farley, Lewis and Simpson",Indian,San Antonio,17873 Angela Squares Suite 689,1.4/5,51min,1
+55,Guzman-Kirby,Mexican,AUSTIN,3709 Alexander Hills Suite 732,3.8,10,0
+56,Price-Olson,Thai,SAN ANTONIO,0904 Sarah Passage Apt. 495,,15,NO
+57,Lawson Ltd,Burgers,dallas,46099 Smith Point,2.3/5,13,False
+58,Ferguson-Berry,Sushi,San Antonio,2978 Paul Inlet,4.1,44,false
+59,"Beard, Wong and Wood",INDIAN,Dallas,52038 John Common Suite 640,4.4,23min,0
+60,"Lopez, King and Jenkins",BURGERS,austin,,3.7,45,YES
+61,"Williams, Meyers and Cuevas",AMERICAN,austin,885 Eric Stravenue,4.4/5,18 mins,0
+62,"King, Barnett and Hudson",Japanese,Dallas,,4.5,19,True
+63,"Sosa, Jackson and Zamora",mexican,dallas,59859 Wilson Centers Suite 534,3.4,12min,NO
+64,"Bautista, Tate and Hale",AMERICAN,Houston,283 Alvarado Ramp,1.2/5,52min,NO
+65,"Chan, Morrow and Adkins",italian,Dallas,92982 Brandt Landing Suite 540,,32,false
+66,"Manning, Shaw and Caldwell",Mexican,Dallas,8079 Ashley Isle Apt. 424,,29min,false
+67,"Wilson, Hurley and Cline",CHINESE,Austin,780 Baker Run,3.3,16 mins,true
+68,"Martin, Martinez and Henry",BURGERS,San Antonio,454 Preston Trail,2.5,28 mins,True
+69,Fernandez-Stone,ITALIAN,dallas,3604 Brown Fall Suite 619,4.5/5,53,false
+70,Anderson-Thomas,chinese,SAN ANTONIO,68390 Joseph Islands Apt. 736,,36,NO
+71,Bird-Gonzalez,chinese,austin,27868 Patterson Pines,,58 mins,True
+72,Henderson-Weaver,Italian,AUSTIN,68569 Dale Prairie,4.0,48 mins,NO
+73,"Dodson, Rodriguez and Gonzalez",Italian,Houston,24939 Jason Green,3.6/5,48 mins,True
+74,"White, Navarro and Gamble",Italian,SAN ANTONIO,749 Evans Walks Suite 170,4.6/5,18,1
+75,"Lewis, Sloan and Collins",Italian,San Antonio,04637 Richard Mount,1.1,41,NO
+76,Snyder and Sons,Italian,austin,,,24,NO
+77,Bradford-Phillips,Pizza,DALLAS,2476 Evan Union Apt. 783,3.3/5,24min,false
+78,Brown Inc,Thai,Dallas,5059 Kennedy Ramp,1.6/5,44,NO
+79,"Le, Wright and Young",MEXICAN,Dallas,,,45min,YES
+80,Acosta Group,Sushi,HOUSTON,06341 Lamb Meadows,,42,True
+81,Galloway-Anderson,SUSHI,DALLAS,8260 Chen Knolls Suite 332,3.0,55,False
+82,"Vasquez, Taylor and Morgan",Mexican,dallas,109 Jimenez Lodge,3.3,16min,0
+83,"Roberts, Martinez and Martin",MEXICAN,dallas,933 Cole Isle Suite 927,1.4/5,47min,False
+84,Fuller-Harris,CHINESE,DALLAS,06857 Natasha Fords,,56,YES
+85,Taylor-Villanueva,chinese,AUSTIN,8813 Aimee Camp,,41,False
+86,Williams-Rodriguez,Japanese,DALLAS,,4.9,53 mins,True
+87,"Lewis, Alvarez and King",Indian,austin,47817 Steve Plains,,45min,YES
+88,Kelly-Murray,Pizza,SAN ANTONIO,141 Dawson Port Suite 451,2.1,34,1
+89,Martin-David,MEXICAN,Austin,7136 Wyatt Alley,2.6,51min,False
+90,"Knapp, Grant and Hayes",italian,SAN ANTONIO,1834 Owen Canyon Apt. 972,2.5/5,23,YES
+91,"Perez, Bradley and Wilkerson",INDIAN,San Antonio,35542 Boyer Tunnel,2.0/5,53,false
+92,Mitchell Group,Pizza,HOUSTON,6698 Williams Port,,30 mins,YES
+93,"Fox, Turner and Ramos",SUSHI,dallas,91502 Heather Brooks Suite 340,3.6,53 mins,False
+94,"Burton, Merritt and Leon",Sushi,Austin,,,15,False
+95,"Perkins, Gonzalez and Delacruz",Thai,Austin,2048 Wells Shoal Apt. 087,3.0,23 mins,True
+96,Hogan Inc,BURGERS,dallas,62522 Ramirez Crest Suite 859,4.1,17min,YES
+97,Durham-Moore,American,DALLAS,7125 Rodgers Camp Apt. 541,3.0/5,31,True
+98,Parker Group,Indian,dallas,8524 Nathan Hill,3.5,41,1
+99,"Nicholson, Elliott and Jones",mexican,austin,1975 Linda Junction Suite 099,4.3/5,25,False
+100,Schmidt-Adams,American,Austin,,1.9,39min,1
