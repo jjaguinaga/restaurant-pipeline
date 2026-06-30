@@ -20,6 +20,13 @@ def get_drivers():
 
 def clean_drivers():
    df = get_drivers()
+   df = df.drop(columns=['age'])
+   df = df.dropna(subset=['total_deliveries'])
+   df['rating'] = df['rating'].fillna(df['rating'].mean().round(2))
+   df['rating'] = df['rating'].abs()
+   df['is_active'] = df['is_active'].fillna('1')
+   df['is_active'] = df['is_active'].map({'1': True, '0': False, 'True': True, 'False': False, 'true': True, 'false': False})
+   df['vehicle_type'] = df['vehicle_type'].str.lower()
    return df
 
 def get_order_items():
@@ -27,6 +34,13 @@ def get_order_items():
 
 def clean_order_items():
    df = get_order_items()
+   df = df.drop(columns=['special_instructions'])
+   df = df[df['quantity'] != 0]
+   df = df.dropna(subset=['item_price'])
+   df['item_name'] = df['item_name'].str.lower()
+   df['item_name'] = df['item_name'].str.strip()
+   df['quantity'] = df['quantity'].abs()
+   df['item_price'] = df['item_price'].replace(r'[\$]', '', regex=True).astype(float)
    return df
 
 def get_orders():
@@ -44,19 +58,19 @@ def clean_restaurants():
    return df 
 
 if __name__ == '__main__':
-   customers_df = clean_customers()
+   # customers_df = clean_customers()
    # drivers_df = clean_drivers()
-   # order_items_df = clean_order_items()
+   order_items_df = clean_order_items()
    # orders_df = clean_orders()
    # restaurants_df = clean_restaurants()
    pd.set_option('display.max_rows', None)
    pd.set_option('display.max_columns', None)
-   print(customers_df.head())
-   print(customers_df.info())
+   # print(customers_df.head())
+   # print(customers_df.info())
    # print(drivers_df.head())
    # print(drivers_df.info())
-   # print(order_items_df.head())
-   # print(order_items_df.info())
+   print(order_items_df.head())
+   print(order_items_df.info())
    # print(orders_df.head())
    # print(orders_df.info())
    # print(restaurants_df.head())
