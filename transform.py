@@ -6,13 +6,10 @@ def get_customers():
 
 def clean_customers():
    df = get_customers()
-   df = df.drop(columns=['email', 'signup_date', 'loyalty_points'])
-   df['phone'] = df['phone'].fillna('none')
+   df = df.drop(columns=['email', 'signup_date', 'loyalty_points', 'phone'])
    df['first_name'] = df['first_name'].str.capitalize()
    df['last_name'] = df['last_name'].str.capitalize()
    df['city'] = df['city'].str.title()
-   clean = df['phone'].str.replace(r'\D', '', regex=True)
-   df['phone'] = clean.str.replace(r'(\d{3})(\d{3})(\d{4})', r'\1-\2-\3', regex=True)   
    return df
 
 def get_drivers():
@@ -20,13 +17,12 @@ def get_drivers():
 
 def clean_drivers():
    df = get_drivers()
-   df = df.drop(columns=['age'])
+   df = df.drop(columns=['age', 'vehicle_type'])
    df = df.dropna(subset=['total_deliveries'])
    df['rating'] = df['rating'].fillna(df['rating'].mean().round(2))
    df['rating'] = df['rating'].abs()
    df['is_active'] = df['is_active'].fillna('1')
    df['is_active'] = df['is_active'].map({'1': True, '0': False, 'True': True, 'False': False, 'true': True, 'false': False})
-   df['vehicle_type'] = df['vehicle_type'].str.lower()
    return df
 
 def get_order_items():
@@ -48,6 +44,12 @@ def get_orders():
 
 def clean_orders():
    df = get_orders()
+   df = df.drop(columns=['delivery_fee', 'delivery_time_mins', 'driver_id'])
+   df['tip_amount'] = df['tip_amount'].fillna(0.0)
+   df['order_amount'] = df['order_amount'].replace(r'[\$]', '', regex=True).astype(float)
+   df['order_amount'] = df['order_amount'].abs()
+   df['status'] = df['status'].str.lower()
+   df['order_date'] = pd.to_datetime(df['order_date'], format='mixed')
    return df
 
 def get_restaurants():
@@ -55,24 +57,29 @@ def get_restaurants():
 
 def clean_restaurants():
    df = get_restaurants()
+   df = df.drop(columns=['cuisine', 'address', 'is_open'])
+   df = df.dropna(subset=['rating'])
+   df['city'] = df['city'].str.title()
+   df['rating'] = df['rating'].str[:3].astype(float)
+   df['avg_prep_time_mins'] = df['avg_prep_time_mins'].str[:2].astype(int)
    return df 
 
 if __name__ == '__main__':
-   # customers_df = clean_customers()
-   # drivers_df = clean_drivers()
+   customers_df = clean_customers()
+   drivers_df = clean_drivers()
    order_items_df = clean_order_items()
-   # orders_df = clean_orders()
-   # restaurants_df = clean_restaurants()
+   orders_df = clean_orders()
+   restaurants_df = clean_restaurants()
    pd.set_option('display.max_rows', None)
    pd.set_option('display.max_columns', None)
-   # print(customers_df.head())
-   # print(customers_df.info())
-   # print(drivers_df.head())
-   # print(drivers_df.info())
+   print(customers_df.head())
+   print(customers_df.info())
+   print(drivers_df.head())
+   print(drivers_df.info())
    print(order_items_df.head())
    print(order_items_df.info())
-   # print(orders_df.head())
-   # print(orders_df.info())
-   # print(restaurants_df.head())
-   # print(restaurants_df.info())
+   print(orders_df.head())
+   print(orders_df.info())
+   print(restaurants_df.head())
+   print(restaurants_df.info())
    
