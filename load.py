@@ -36,6 +36,7 @@ def load_data():
                CREATE TABLE restaurants (
                   restaurant_id INTEGER PRIMARY KEY,
                   restaurant_name TEXT,
+                  cuisine TEXT,
                   city TEXT,
                   rating FLOAT,
                   avg_prep_time_mins INTEGER
@@ -43,7 +44,7 @@ def load_data():
                
    for _, row in restaurants.iterrows():
       cur.execute(
-         'INSERT INTO restaurants VALUES (%s, %s, %s, %s, %s)',
+         'INSERT INTO restaurants VALUES (%s, %s, %s, %s, %s, %s)',
          tuple(row)
       )
       

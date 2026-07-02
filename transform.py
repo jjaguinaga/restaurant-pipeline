@@ -17,9 +17,10 @@ def get_restaurants():
 
 def clean_restaurants():
    df = get_restaurants()
-   df = df.drop(columns=['cuisine', 'address', 'is_open'])
+   df = df.drop(columns=['address', 'is_open'])
    df = df.dropna(subset=['rating'])
    df['city'] = df['city'].str.title()
+   df['cuisine'] = df['cuisine'].str.lower()
    df['rating'] = df['rating'].str[:3].astype(float)
    df['avg_prep_time_mins'] = df['avg_prep_time_mins'].str[:2].astype(int)
    return df 
@@ -33,8 +34,9 @@ def clean_orders():
    df = df.drop(columns=['delivery_fee', 'delivery_time_mins', 'driver_id'])
    df['tip_amount'] = df['tip_amount'].fillna(0.0)
    df['order_amount'] = df['order_amount'].replace(r'[\$]', '', regex=True).astype(float)
-   df['order_amount'] = df['order_amount'].abs()
    df['status'] = df['status'].str.lower()
+   df['status'] = df['status'].replace({'canceled': 'cancelled', 'in_progress': 'in progress', 'complete': 'completed', 'delivered': 'completed'})
+   df['order_amount'] = df['order_amount'].abs()
    df['order_date'] = pd.to_datetime(df['order_date'], format='mixed')
    return df
 
@@ -59,8 +61,8 @@ def get_drivers():
 def clean_drivers():
    df = get_drivers()
    df = df.drop(columns=['age', 'vehicle_type'])
-   df = df.dropna(subset=['total_deliveries'])
-   df['rating'] = df['rating'].fillna(df['rating'].mean().round(2))
+   df = df.dropna(subset=['total_deliveries', 'rating'])
+   df['rating'] = df['rating'].replace(6.2, 4.2)
    df['rating'] = df['rating'].abs()
    df['is_active'] = df['is_active'].fillna('1')
    df['is_active'] = df['is_active'].map({'1': True, '0': False, 'True': True, 'False': False, 'true': True, 'false': False})
